@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="170dp"
+    android:layout_height="200dp"
+    android:layout_margin="20dp"
+    android:backgroundTint="@color/white">
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_margin="10dp"
+        android:textColor="#570EB1"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:text="37.678" />
+
+    <TextView
+        android:id="@+id/tv_dollars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="15dp"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:src="@drawable/coin"/>
+
+</androidx.cardview.widget.CardView>

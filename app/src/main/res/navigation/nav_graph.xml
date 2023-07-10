@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="bolli.adom.desa.white.ui.fragments.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true"/>
+        <argument
+            android:name="spin"
+            app:argType="integer" />
+        <argument
+            android:name="balance"
+            app:argType="integer" />
+        <argument
+            android:name="bid"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/bidFragment"
+        android:name="bolli.adom.desa.white.ui.fragments.BidFragment"
+        android:label="fragment_bid"
+        tools:layout="@layout/fragment_bid" >
+        <action
+            android:id="@+id/action_bidFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/bidFragment"
+            app:popUpToInclusive="true"/>
+        <argument
+            android:name="balance"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/coinFragment"
+        android:name="bolli.adom.desa.white.ui.fragments.CoinFragment"
+        android:label="fragment_coin"
+        tools:layout="@layout/fragment_coin" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="bolli.adom.desa.white.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_coinFragment"
+            app:destination="@id/coinFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bidFragment"
+            app:destination="@id/bidFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="bolli.adom.desa.white.ui.fragments.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_bidFragment"
+            app:destination="@id/bidFragment"
+            app:popUpTo="@id/resultFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_resultFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/resultFragment"
+            app:popUpToInclusive="true"/>
+        <argument
+            android:name="balance"
+            app:argType="integer" />
+        <argument
+            android:name="bid"
+            app:argType="integer" />
+        <argument
+            android:name="win"
+            app:argType="boolean" />
+    </fragment>
+</navigation>

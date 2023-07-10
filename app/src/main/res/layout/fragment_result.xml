@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    tools:context=".white.ui.fragments.ResultFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#B5CC3B3B">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelines"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="60dp" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="#FFEB3B"
+                android:textSize="41sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/guidelines" />
+
+            <TextView
+                android:id="@+id/current_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Сurrent balance: "
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/current_balance1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="#FFEB3B"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/current_balance"
+                app:layout_constraintTop_toTopOf="@id/current_balance"
+                tools:text="1950" />
+
+            <TextView
+                android:id="@+id/past_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Past balance: "
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/current_balance"
+                app:layout_constraintTop_toBottomOf="@id/current_balance" />
+
+            <TextView
+                android:id="@+id/past_balance1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="#FFEB3B"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/past_balance"
+                app:layout_constraintTop_toTopOf="@id/past_balance"
+                tools:text="2000" />
+
+            <TextView
+                android:id="@+id/bid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Your bid: "
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/current_balance"
+                app:layout_constraintTop_toBottomOf="@id/past_balance" />
+
+            <TextView
+                android:id="@+id/bid1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="#FFEB3B"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/bid"
+                app:layout_constraintTop_toTopOf="@id/bid" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_home"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="55dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/button"
+        android:padding="20dp"
+        android:text="home"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_restart"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="55dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/button"
+        android:padding="20dp"
+        android:text="restart"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</FrameLayout>
